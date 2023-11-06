@@ -1,4 +1,4 @@
-# 42-Blackholeisbasck
+# 42-Blackhole_is_back
 
 Simple ruby program to get your real blackhole instead of the new milestone system.
 
