@@ -8,6 +8,12 @@ Simple ruby program to get your real blackhole instead of the new milestone syst
 sudo apt install ruby
 sudo gem install oauth2 json colorize
 ```
+## Installation
+
+```
+git clone https://github.com/Haletran/42-Blackholeisback.git
+```
+
 ## Environmnent Variables
 
 To run this project, you will need to add the following environment 
@@ -20,7 +26,7 @@ To get those variables you need to create an application in [42intra](https://pr
 ## Usage
 
 ```
-ruby getinfo.rb <yout-login>
+ruby getinfo.rb <your-login>
 ```
 
 ## Documentation
