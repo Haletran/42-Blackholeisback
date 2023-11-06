@@ -23,12 +23,13 @@ def main
     response2 = token.get("v2/users/#{login}/locations")
     user_info = JSON.parse(response.body, object_class: OpenStruct)
     user_locations = JSON.parse(response2.body, object_class: OpenStruct)
-        
+    
     #Get informations
     black = user_info[0].blackholed_at.red
     level = user_info[0].level
     name = user_info[0].grade
     loc = user_locations[0].host
+
 
     if (black.empty? && level.empty?)
         puts "No User found"
