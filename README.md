@@ -6,7 +6,7 @@ Simple ruby program to get your real blackhole instead of the new milestone syst
 
 ```
 sudo apt install ruby
-gem install oauth2 json colorize
+sudo gem install oauth2 json colorize
 ```
 
 ## Environmnent Variables
