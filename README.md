@@ -1,4 +1,4 @@
-# 42-Blackholeisbasck
+# 42-Blackhole_is_back
 
 Simple ruby program to get your real blackhole instead of the new milestone system.
 
@@ -6,15 +6,16 @@ Simple ruby program to get your real blackhole instead of the new milestone syst
 
 ```
 sudo apt install ruby
-gem install oauth2 json colorize
-
+sudo gem install oauth2 json colorize
 ```
 ## Environmnent Variables
 
 To run this project, you will need to add the following environment 
-variables to **getinfo.rb** file.
+variables to **getinfo.rb** file: 
+- UID
+- SECRET
 
-'UID' and 'SECRET', to get those variables you need to create an application in [42intra](https://profile.intra.42.fr/oauth/applications).
+To get those variables you need to create an application in [42intra](https://profile.intra.42.fr/oauth/applications).
 
 ## Usage
 
