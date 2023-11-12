@@ -1,18 +1,15 @@
 require "oauth2"
 require "json"
 require 'colorize'
-require 'tty-font'
-require 'tty-box'
 
-UID = "u-s4t2ud-525cf8bc1232d9edf863402ea3b9becefd5945e8a3bd0e0165c72d1ee1e3d067" 
-SECRET = "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"
+UID = "" 
+SECRET = ""
 
 def main
     if (ARGV.empty? || (UID.empty? || SECRET.empty?))
         puts "Usage: ruby getinfo.rb <your_login>"
         exit
     end
-    font = TTY::Font.new(:standard)
     login = ARGV[0]
     client = OAuth2::Client.new(UID, 
     SECRET,
