@@ -1,22 +1,20 @@
-const url = "https://api.intra.42.fr/v2/users/bapasqui/cursus_users";
+async function fetchData() {
+  const url = "https://api.intra.42.fr/v2/users/bapasqui/cursus_users";
 
-const options = {
-	headers: {
-		    Authorization: "Bearer 82d4e7f4d3f00c577edb8facbfe91f02bd99fe627701ea71cbf6e10f10082c19"
-		  }
-};
+  const options = {
+    headers: {
+      Authorization: "Bearer 4ba9c4e7041558bffd0efb04103a83e83b8efa7d1325f611d004b804326d0cc0",
+    },
+  };
 
-fetch(url, options)
-    .then(res => res.json())
-    	.then((data) => {
-		
-		var test = data[0];	
-		console.log(test.blackholed_at);	
-		
-		//const  daysLeftDiv = document.createElement("div");
-		//daysLeftDiv.innerText = test.blackholed_at;
-        //daysLeftDiv.style.fontSize = "0.7em";
-		//daysLeftDiv.style.fontWeight = "400";
-		//daysLeftDiv.style.animation = "0.42s ease 0s 1 normal none running fadeIn";
-		//document.getElementById("pace-system-container").appendChild(daysLeftDiv);
-});
+  try {
+    const response = await fetch(url, options);
+    const data = await response.json();
+
+    var test = data[0];
+    console.log(test.blackholed_at);
+  } catch (error) {
+    console.error("Une erreur s'est produite :", error);
+  }
+}
+fetchData();
