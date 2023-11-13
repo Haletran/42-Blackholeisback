@@ -1,0 +1,24 @@
+{
+    "manifest_version": 2,
+    "name": "ft_blackhole",
+    "version": "0.6",
+    "description": "Test d'extension",
+    "icons": {
+        "48": "icons/blackhole.png"
+    },
+    "content_scripts": [
+        {
+            "html": [
+                "index.html"
+            ],
+            "js": [
+                "hello.js"
+            ]
+        }
+    ],
+    "browser_specific_settings": {
+        "gecko": {
+            "id": "ft_blackhole-0.1@intra.42.fr"
+        }
+    }
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>BH Real Date</title>
+</head>
+
+<body>
+
+	<h1>Blackhole Absorption</h1>
+	<div id="data-container">Fetching data...</div>
+
+	<script>
+		// Fetch data from the server
+		async function fetchData() {
+			try {
+				const response = await fetch('/data');
+				const data = await response.json();
+
+				// Display the fetched data in the HTML page
+				document.getElementById('data-container').innerText = ` ${data.result}`;
+			} catch (error) {
+				console.error('An error occurred while fetching data:', error);
+				document.getElementById('data-container').innerText = 'Error fetching data';
+			}
+		}
+
+		// Call the fetchData function when the page loads
+		window.onload = fetchData;
+	</script>
+
+</body>
+
+</html>
